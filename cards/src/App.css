@@ -34,12 +34,15 @@
   text-align: right;
 
 }
-.feed-label-image{
+.ui.image.feed-label-image{
 
-   height:35px;
-   width: 35px;
+  object-fit: cover!important;
+
+  width: 35px!important;
+  height: 35px!important;
 }
 
 .header-image{
+  object-fit: cover;
   height: 300px;
 }
