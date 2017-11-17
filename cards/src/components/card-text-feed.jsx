@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Card , Feed ,Icon , Image } from 'semantic-ui-react';
+import { Card , Feed , Image } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
+import Wrapper from './likes-counter';
 import '../App.css';
 import userData from '../content'
 
@@ -37,7 +38,9 @@ class CardText extends Component {
                             </Card.Description>
                             <Feed>
                                 <Feed.Event>
-                                    <Feed.Label image={user.url}  className = "feed-label-image" />
+                                    <Feed.Label  >
+                                       <Image as="img" avatar className="feed-label-image" circular src={user.url}  />
+                                    </Feed.Label>
                                     <Feed.Content>
                                         <Feed.Summary>
                                             <a>{user.name}</a> posted on his page.
@@ -46,10 +49,7 @@ class CardText extends Component {
                                         </Feed.Summary>
                                         {/*&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;     &nbsp; &nbsp; &nbsp; &nbsp;*/}
                                         <Feed.Meta className='like'>
-                                            <Feed.Like>
-                                                <Icon name='like' />
-                                               <p>5 Likes</p>
-                                            </Feed.Like>
+                                            <Wrapper likes= {user.likes} />
                                             {/*&nbsp; &nbsp; &nbsp;*/}
                                             {/*<Feed.Like>*/}
                                                 {/*<Icon name='chat' />*/}
