@@ -31,8 +31,9 @@
 }
 .like{
   float: right;
-  text-align: right;
-
+}
+.claps {
+  float: left;
 }
 .ui.image.feed-label-image{
 

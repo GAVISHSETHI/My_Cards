@@ -27,7 +27,7 @@ class Wrapper extends Component {
         event.target.style.color = '';
     };
     render() {
-        return <Button content='Like' icon='heart'
+        return <Button  icon='heart'
       label={{ basic: true, pointing: 'left', content: this.state.val + this.props.likes + ' likes'}} onClick={this.update}> </Button>
     }
 }
